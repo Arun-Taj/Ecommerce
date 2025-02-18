@@ -1,10 +1,10 @@
 import React from 'react'
-import new_collections from './Assets/new_collections'
-import Items from './Item/Items'
+import new_collections from '../Assets/new_collections'
+import Items from '../Item/Items'
 
 const NewCollections = () => {
   return (
-    <div className='flex flex-col items-center gap-2 h-[90vh]'>
+    <div className='flex flex-col items-center gap-2 mb-[100px]'>
       <h1 className='text-slate-950 font-bold text-2xl'>NEW COLLECTIONS</h1>
       <hr className='w-52 h-2 bg-black rounded-xl'/>
       <div className='grid grid-cols-4 gap-6 mt-4  rounded-lg'> 
