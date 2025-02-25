@@ -5,42 +5,44 @@ import hero_image from '../Assets/hero_image.png';
 
 const Hero = () => {
   return (
-    <div className="min-h-screen bg-custom-gradient flex flex-col lg:flex-row">
+    <div className="min-h-screen bg-custom-gradient flex flex-col lg:flex-row items-center justify-center px-4 lg:px-20 py-10">
       {/* Left Section */}
-      <div className="hero-left flex-1 flex flex-col justify-center gap-5 px-6 lg:pl-[180px] text-center lg:text-left">
-        <h1 className="text-[#090909] font-semibold text-lg sm:text-xl">
+      <div className="flex-1 flex flex-col justify-center gap-6 text-center lg:text-left">
+        <h1 className="text-[#090909] font-semibold text-sm sm:text-base md:text-lg">
           NEW ARRIVALS ONLY
         </h1>
+
         <div>
-          <div className="hand-hand-icon flex items-center gap-5 justify-center lg:justify-start">
-            <h1 className="text-[#171717] text-[50px] sm:text-[60px] lg:text-[70px] font-bold">
+          <div className="flex items-center gap-4 justify-center lg:justify-start">
+            <h1 className="text-[#171717] font-bold text-5xl sm:text-6xl lg:text-7xl">
               New
             </h1>
             <img
               src={hand_icon}
               alt="Hand Icon"
-              className="w-[70px] sm:w-[90px] lg:w-[105px]"
+              className="w-16 sm:w-20 lg:w-24"
             />
           </div>
-          <p className="text-[#171717] text-[50px] sm:text-[60px] lg:text-[70px] font-bold">
+          <p className="text-[#171717] font-bold text-5xl sm:text-6xl lg:text-7xl">
             Collections
           </p>
-          <p className="text-[#171717] text-[50px] sm:text-[60px] lg:text-[70px] font-bold">
-            For everyone
+          <p className="text-[#171717] font-bold text-5xl sm:text-6xl lg:text-7xl">
+            For Everyone
           </p>
         </div>
-        <div className="hero-latest-button flex justify-center items-center gap-3 w-full sm:w-[280px] lg:w-[310px] h-[60px] sm:h-[70px] rounded-3xl bg-[#ff4141] mt-4 text-lg sm:text-xl lg:text-2xl font-medium cursor-pointer mx-auto lg:mx-0">
-          <div>Latest Collections</div>
-          <img src={arrow} alt="Arrow Icon" />
-        </div>
+
+        <button className="flex items-center justify-center gap-3 w-full max-w-xs h-12 sm:h-14 rounded-3xl bg-[#ff4141] mt-4 text-lg sm:text-xl lg:text-2xl font-medium cursor-pointer mx-auto lg:mx-0 transition-transform hover:scale-105">
+          <span>Latest Collections</span>
+          <img src={arrow} alt="Arrow Icon" className="w-5 h-5 sm:w-6 sm:h-6" />
+        </button>
       </div>
 
       {/* Right Section */}
-      <div className="hero-right flex-1 flex items-center justify-center mt-8 lg:mt-0">
+      <div className="flex-1 flex items-center justify-center mt-8 lg:mt-0">
         <img
           src={hero_image}
           alt="Hero"
-          className="w-[90%] sm:w-[70%] lg:w-[80%] max-w-[500px]"
+          className="w-11/12 sm:w-3/4 lg:w-4/5 max-w-md"
         />
       </div>
     </div>
