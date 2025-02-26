@@ -15,7 +15,7 @@ const Navbar = () => {
             <img src={logo} alt="Shopper Logo" className="w-10 sm:w-12" />
           </Link>
           <Link to="/">
-            <p className="text-gray-900 text-2xl sm:text-3xl font-bold">SHOPPER</p>
+            <p className="text-gray-900 text-2xl sm:text-3xl font-bold">TAJPURIYA SHOP</p>
           </Link>
         </div>
 

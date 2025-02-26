@@ -7,17 +7,17 @@ const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
   console.log("ShopCategory - all_product:", all_product); // Debug log
   return (
-    <div>
-      <img src={props.banner} alt="" />
-      <div>
+    <div className="block mx-auto my-[30px]">
+      <img src={props.banner} alt="" className="px-6"/>
+      <div className="flex px-6  pt-2 justify-between">
         <p>
-          <span>Showing 1-12 </span>out of 36 products
+          <span className="font-bold">Showing 1-12 </span>out of 36 products
         </p>
-        <div className="flex items-center">
+        <div className="flex items-center ml-4   border border-slate-600 rounded-lg cursor-pointer">
           Sort by <RiArrowDropDownLine size={30} />
         </div>
       </div>
-      <div>
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4  justify-center mt-8 gap-6 px-6">
         {all_product.map((item, i) => {
           if (props.category === item.category) {
             return (
@@ -34,6 +34,9 @@ const ShopCategory = (props) => {
             return null;
           }
         })}
+      </div>
+      <div className="flex justify-center items-center pt-8 ">
+        <button className="rounded-2xl border border-slate-600 p-2 bg-slate-300 font-bold">Explore More</button>
       </div>
     </div>
   );

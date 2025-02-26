@@ -5,7 +5,9 @@ import Shop from './Components/Pages/Shop'
 import ShopCategory from './Components/Pages/ShopCategory'
 import Product from './Components/Pages/Product'
 import Carts from './Components/Pages/Carts'
-import LoginSignUp from './Components/Pages/LoginSignUp'
+import LoginSignUp from './Components/Pages/Login'
+import SignUp from './Components/Pages/SignUp'
+import TermsAndConditions from './Components/Pages/TermsAndConditions'
 import Footer from './Components/Footer/Footer'
 import men_banner from './Components/Assets/banner_mens.png'
 import kids_banner from "./Components/Assets/banner_kids.png"
@@ -26,6 +28,8 @@ const App = () => {
          <Route path=":productId" element={<Product/>}/>
       <Route path="/cart" element={<Carts/>}/>
       <Route path="/login" element={<LoginSignUp/>}/>
+      <Route path='/signup' element={<SignUp/>}/>
+      <Route path='/termsAndConditions'element={<TermsAndConditions/>}/>
       
       
     </Routes>
