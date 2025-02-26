@@ -5,9 +5,9 @@ import App from './App.jsx'
 import ShopContextProvider from './ShopContext/ShopContext.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <ShopContextProvider>
-  <StrictMode>
+  <ShopContextProvider >
+  
     <App />
-  </StrictMode>
+  
   </ShopContextProvider>
 )

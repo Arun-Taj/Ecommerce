@@ -22,7 +22,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6 lg:gap-12">
           <ul className="flex items-center gap-6 text-gray-500 text-sm sm:text-lg font-medium">
-            {["shop", "mens", "womens", "kids"].map((item) => (
+            {["shop", "men", "women", "kids"].map((item) => (
               <li
                 key={item}
                 className="flex flex-col items-center gap-1 cursor-pointer"
@@ -62,7 +62,7 @@ const Navbar = () => {
       <div className="lg:hidden bg-white border-t border-gray-200">
         <nav>
           <ul className="flex items-center justify-around text-gray-500 text-sm font-medium">
-            {["shop", "mens", "womens", "kids"].map((item) => (
+            {["shop", "men", "women", "kids"].map((item) => (
               <li
                 key={item}
                 className="cursor-pointer"
