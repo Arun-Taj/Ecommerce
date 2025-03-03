@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import star_dull_icon from "../Assets/star_dull_icon.png";
+import { ShopContext } from "../../ShopContext/ShopContext";
 
 const DisplayProducts = ({ product }) => {
+
+  const {addToCart}=useContext(ShopContext)
+  const handleAddToCart = () => {
+    // Display a confirmation alert before adding to the cart
+    const confirmed = window.confirm("Do you really want to add this product to your cart?");
+    if (confirmed) {
+      addToCart(product.id);
+    }
+  };
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex flex-col md:flex-row gap-8">
@@ -75,7 +85,7 @@ const DisplayProducts = ({ product }) => {
             </div>
           </div>
           {/* Add to Cart Button */}
-          <button className="px-4 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded transition duration-200 mb-4">
+          <button className="px-4 bg-orange-600 hover:bg-orange-700 text-white py-3 rounded transition duration-200 mb-4"    onClick={handleAddToCart}>
             ADD TO CART
           </button>
           {/* Additional Information */}

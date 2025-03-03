@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Items = (props) => {
   return (
     <div className='w-[350px] hover:scale-105 transition duration-600'>
-     <Link to={`/product/${props.id}`}><img src={props.image} alt="" /></Link>
+     <Link to={`/product/${props.id}`}><img src={props.image} alt="" onClick={window.scrollTo(0,0)}/></Link>
       
       <p className='my-1.5'>{props.name}</p>
       <div className='flex justify-between pr-8'>
