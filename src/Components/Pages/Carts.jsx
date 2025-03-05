@@ -6,9 +6,10 @@ const Carts = () => {
 
   // Merge cart items with product data and filter out items with zero quantity.
   const productsWithQuantity = Object.entries(cartItems)
-    .map(([index, quantity]) => {
-      const idx = parseInt(index, 10);
-      return { ...all_product[idx], quantity, index: idx };
+    .map(([id, quantity]) => {
+       // Find the product by matching the id
+    const product = all_product.find((prod) => prod.id === parseInt(id, 10));
+    return { ...product, quantity, id: parseInt(id, 10) };
     })
     .filter((product) => product.quantity > 0);
 
