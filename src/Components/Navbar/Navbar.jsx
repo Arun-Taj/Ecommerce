@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../Assets/logo.png";
 import cart_icon from "../Assets/cart_icon.png";
 import { Link } from "react-router-dom";
+import { ShopContext } from "../../ShopContext/ShopContext";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
+  const {getTotalCartItems}=useContext(ShopContext)
 
   return (
     <header className="sticky top-0 bg-white shadow-sm shadow-black z-50">
@@ -50,7 +52,7 @@ const Navbar = () => {
             <Link to="/cart">
               <img src={cart_icon} alt="Cart Icon" className="w-6 sm:w-8" />
               <div className="absolute top-0 right-0 w-4 h-4 bg-red-500 text-white text-xs sm:text-sm flex items-center justify-center rounded-full">
-              0
+              {getTotalCartItems()}
             </div>
             </Link>
             
