@@ -1,48 +1,91 @@
-import React from 'react';
-import hand_icon from '../Assets/hand_icon.png';
-import arrow from '../Assets/arrow.png';
-import hero_image from '../Assets/hero_image.png';
+import React from "react";
+import { motion } from "framer-motion";
+import hand_icon from "../Assets/hand_icon.png";
+import arrow from "../Assets/arrow.png";
+import WomenFashion from "../Assets/WomenFashion.png";
+import { TbWorldSearch } from "react-icons/tb";
+import Discovericon from '../Assets/Discovericon1.png'
+import { FaArrowCircleRight } from "react-icons/fa";
+import DropBox from '../Assets/DropBox.png'
 
 const Hero = () => {
   return (
     <div className="min-h-screen bg-custom-gradient flex flex-col lg:flex-row items-center justify-center px-4 lg:px-20 py-10">
       {/* Left Section */}
       <div className="flex-1 flex flex-col justify-center gap-6 text-center lg:text-left">
-        <h1 className="text-[#090909] font-semibold text-sm sm:text-base md:text-lg">
-          NEW ARRIVALS ONLY
-        </h1>
+        <motion.h2 
+          className="text-[#090909] font-semibold text-sm sm:text-base md:text-lg flex items-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+           <span>Introducing Our Latest Drop</span>
+          <motion.img
+              src={DropBox}
+              alt="DropBox"
+              className="w-16 sm:w-20 lg:w-24"
+              initial={{ opacity: 0, rotate: -20 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            />
+        </motion.h2>
 
         <div>
           <div className="flex items-center gap-4 justify-center lg:justify-start">
-            <h1 className="text-[#171717] font-bold text-5xl sm:text-6xl lg:text-7xl">
-              New
-            </h1>
-            <img
-              src={hand_icon}
-              alt="Hand Icon"
+            <motion.h1
+              className="text-[#171717] font-bold text-5xl sm:text-6xl lg:text-7xl flex items-center"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+               <span>Discover</span><motion.img
+              src={Discovericon}
+              alt="DiscoverIcon"
               className="w-16 sm:w-20 lg:w-24"
+              initial={{ opacity: 0, rotate: -20 }}
+              animate={{ opacity: 1, rotate: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
             />
+            </motion.h1>
+            
           </div>
-          <p className="text-[#171717] font-bold text-5xl sm:text-6xl lg:text-7xl">
-            Collections
-          </p>
-          <p className="text-[#171717] font-bold text-5xl sm:text-6xl lg:text-7xl">
-            For Everyone
-          </p>
+          <motion.p
+            className="text-[#171717] font-bold text-5xl sm:text-6xl lg:text-7xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            Your Next Style Statement
+          </motion.p>
+          <motion.p
+            className="mt-2 text-gray-700 text-base sm:text-lg lg:text-xl"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            Curated designs & exclusive trends crafted just for you.
+          </motion.p>
         </div>
 
-        <button className="flex items-center justify-center gap-3 w-full max-w-xs h-12 sm:h-14 rounded-3xl bg-[#ff4141] mt-4 text-lg sm:text-xl lg:text-2xl font-medium cursor-pointer mx-auto lg:mx-0 transition-transform hover:scale-105">
-          <span>Latest Collections</span>
-          <img src={arrow} alt="Arrow Icon" className="w-5 h-5 sm:w-6 sm:h-6" />
-        </button>
+        <motion.button
+          className="flex items-center justify-center gap-3 w-full max-w-xs h-12 sm:h-14 rounded-3xl bg-[#ff4141] mt-4 text-lg sm:text-xl lg:text-2xl font-medium cursor-pointer mx-auto lg:mx-0"
+          whileHover={{ scale: 1.05, backgroundColor: "#e22e2e" }}
+          transition={{ duration: 0.3 }}
+        >
+          <span>Shop New Arrivals</span>
+          <FaArrowCircleRight className="text-white"/>
+        </motion.button>
       </div>
 
       {/* Right Section */}
       <div className="flex-1 flex items-center justify-center mt-8 lg:mt-0">
-        <img
-          src={hero_image}
-          alt="Hero"
+        <motion.img
+          src={WomenFashion}
+          alt="Featured Fashion"
           className="w-11/12 sm:w-3/4 lg:w-4/5 max-w-md"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 1 }}
         />
       </div>
     </div>
