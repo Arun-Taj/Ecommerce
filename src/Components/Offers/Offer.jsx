@@ -1,6 +1,6 @@
 import React from "react";
 import exclusive_image from "../Assets/exclusive_image.png";
-import Menstyle1 from '../Assets/Menstyle1.png'
+import Menstyle1 from '../Assets/MenStyle1.png'
 const Offer = () => {
   return (
     <div className="w-full max-w-5xl mx-auto my-10 px-4 bg-gradient-to-b from-pink-200 to-blue-100 overflow-hidden flex flex-col md:flex-row">
