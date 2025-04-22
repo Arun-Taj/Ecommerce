@@ -12,6 +12,16 @@ export default {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%)',
       },
+      animation: {
+        float: 'float 3s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      }
+      
     },
   },
   plugins: [],

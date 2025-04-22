@@ -12,6 +12,7 @@ import Footer from './Components/Footer/Footer'
 import men_banner from './Components/Assets/banner_mens.png'
 import kids_banner from "./Components/Assets/banner_kids.png"
 import women_banner from './Components/Assets/banner_women.png'
+import NewCollections from './Components/NewCollections/NewCollections'
 
 
 const App = () => {
@@ -31,7 +32,7 @@ const App = () => {
       <Route path="/login" element={<LoginSignUp/>}/>
       <Route path='/signup' element={<SignUp/>}/>
       <Route path='/termsAndConditions'element={<TermsAndConditions/>}/>
-      
+      <Route path='/newCollections' element={<NewCollections/>}/>
       
     </Routes>
    

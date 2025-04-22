@@ -7,6 +7,9 @@ import { TbWorldSearch } from "react-icons/tb";
 import Discovericon from '../Assets/Discovericon1.png'
 import { FaArrowCircleRight } from "react-icons/fa";
 import DropBox from '../Assets/DropBox.png'
+import {Link} from 'react-router-dom'
+import NewCollections from "../NewCollections/NewCollections";
+
 
 const Hero = () => {
   return (
@@ -66,15 +69,17 @@ const Hero = () => {
             Curated designs & exclusive trends crafted just for you.
           </motion.p>
         </div>
-
+        <Link smooth to="/newCollections">
         <motion.button
           className="flex items-center justify-center gap-3 w-full max-w-xs h-12 sm:h-14 rounded-3xl bg-[#ff4141] mt-4 text-lg sm:text-xl lg:text-2xl font-medium cursor-pointer mx-auto lg:mx-0"
           whileHover={{ scale: 1.05, backgroundColor: "#e22e2e" }}
           transition={{ duration: 0.3 }}
         >
+          
           <span>Shop New Arrivals</span>
           <FaArrowCircleRight className="text-white"/>
         </motion.button>
+        </Link>
       </div>
 
       {/* Right Section */}
